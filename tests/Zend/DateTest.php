@@ -20,6 +20,8 @@
  * @version    $Id $
  */
 
+use PHPUnit\Framework\Attributes\Group;
+
 /**
  * These const values control some testing behavior.
  * They may be defined here or in TestConfiguration.php.
@@ -40,8 +42,8 @@ if (!defined('TESTS_ZEND_I18N_EXTENDED_COVERAGE')) {
  * @subpackage UnitTests
  * @copyright  Copyright (c) 2005-2015 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @group      Zend_Date
  */
+#[Group('Zend_Date')]
 class Zend_DateTest extends PHPUnit\Framework\TestCase
 {
     private $_cache = null;
@@ -4463,9 +4465,7 @@ class Zend_DateTest extends PHPUnit\Framework\TestCase
         }
     }
 
-    /**
-     * @group   ZF-8332
-     */
+    #[Group('ZF-8332')]
     public function testSetDayOnThirtyFirstGivesThirtyOne()
     {
         $locale = new Zend_Locale('en_US');
@@ -5672,9 +5672,7 @@ class Zend_DateTest extends PHPUnit\Framework\TestCase
         $date = new Zend_Date(array('year' => 2008, 'month' => 10, 'day' => 12));
         $this->assertEquals('2008年10月12日', $date->get(Zend_Date::DATE_LONG, 'zh'));
     }
-    /**
-     * @group ZF-10492
-     */
+    #[Group('ZF-10492')]
     public function test_farFutureDate()
     {
         $t    = '2041-08-01 00:00:00';
@@ -5682,9 +5680,7 @@ class Zend_DateTest extends PHPUnit\Framework\TestCase
         $this->assertEquals($t, $date->toString('yyyy-MM-dd HH:mm:ss'));
     }
 
-    /**
-     * @group ZF-11846
-     */
+    #[Group('ZF-11846')]
     public function testGetTimezoneFromStringForTimezoneOffsetsGreaterThan12()
     {
         $date = new Zend_Date();
@@ -5692,9 +5688,7 @@ class Zend_DateTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('Etc/GMT-14', $date->getTimezoneFromString('18:00:00+1400'));
     }
 
-    /**
-     * @group ZF-11992
-     */
+    #[Group('ZF-11992')]
     public function testDateShouldMatchOnFirstDayOfYear()
     {
         $date = new Zend_Date('01.01.2012');
@@ -5702,9 +5696,7 @@ class Zend_DateTest extends PHPUnit\Framework\TestCase
         $this->assertEquals('2012-01-01', $out);
     }
 
-    /**
-     * @group GH-2
-     */
+    #[Group('GH-2')]
     public function testGetTimezoneFromStringForTimezonesWithUnderscore()
     {
         $date = new Zend_Date();
@@ -5720,9 +5712,7 @@ class Zend_DateTest extends PHPUnit\Framework\TestCase
         );
     }
 
-    /**
-     * @group GH-561
-     */
+    #[Group('GH-561')]
     public function testGetYearAndMonthWithoutDot()
     {
         $date = new Zend_Date('2014.12.29');

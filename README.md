@@ -1,7 +1,6 @@
 # Zend Framework 1 - Date & TimeSync
 
 [![Build](https://github.com/gizmocraftcom/zf1-date/workflows/Build/badge.svg?event=push)](https://github.com/gizmocraftcom/zf1-date/actions?query=workflow%3ABuild+event%3Apush)
-[![codecov](https://codecov.io/gh/gizmocraftcom/zf1-date/branch/master/graph/badge.svg)](https://codecov.io/gh/gizmocraftcom/zf1-date)
 [![Latest Stable Version](https://poser.pugx.org/gizmocraft/zendframework1-date/v/stable)](https://packagist.org/packages/gizmocraft/zendframework1-date)
 [![Total Downloads](https://poser.pugx.org/gizmocraft/zendframework1-date/downloads)](https://packagist.org/packages/gizmocraft/zendframework1-date)
 [![License](https://poser.pugx.org/gizmocraft/zendframework1-date/license)](https://packagist.org/packages/gizmocraft/zendframework1-date)

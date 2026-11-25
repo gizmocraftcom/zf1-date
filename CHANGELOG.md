@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Development
+
+- CI installs `tzdata-legacy` on the Ubuntu runner. Ubuntu ships legacy timezone IDs such as `CET` only in that package, and without it PHP rejects `date_default_timezone_set('CET')`, which the tests use. Applications on such systems that pass legacy IDs to `Zend_Date` need the package too, or should use IDs such as `Europe/Berlin`.
+
 ## 2.0.0
 
 Fork of `diablomedia/zendframework1-date`, published as `gizmocraft/zendframework1-date`.
